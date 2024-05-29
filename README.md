@@ -15,11 +15,11 @@ To use the secrets in your shell session as environment variables, you can use t
 ### PowerShell
 
 ```powershell
-iex (bitwarden-secrets | Out-String)
+iex (bw-secrets | Out-String)
 ```
 
 ### Bash
 
 ```bash
-source <(bitwarden-secrets)
+source <(bw-secrets)
 ```
