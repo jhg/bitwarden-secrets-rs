@@ -1,6 +1,6 @@
 [package]
 name = "bitwarden-secrets"
-version = "0.1.0"
+version = "0.2.0"
 description = "A simple command line tool to manage Bitwarden secrets"
 edition = "2021"
 license = "Unlicense"
