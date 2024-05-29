@@ -69,6 +69,12 @@ fn main() -> io::Result<()> {
 
     let mut secrets = HashMap::new();
     for (id, config) in config {
+        if !config.object.is_a_secret() {
+            eprintln!("Skipping non-secret object: {}", config.object.as_str());
+            eprintln!("Allowed objects are username, password, totp, uri and notes");
+            continue;
+        }
+
         let Ok(value) = session.get_object(config.object, &id) else {
             eprintln!("Failed to get {}: {}", config.name, id);
             continue;
